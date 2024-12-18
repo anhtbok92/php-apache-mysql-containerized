@@ -4,6 +4,7 @@ FROM php:${PHP_VERSION:+${PHP_VERSION}-}fpm-alpine
 RUN apk update; \
     apk upgrade;
 
+RUN apk add --no-cache openssl-dev
 RUN apk add --no-cache oniguruma-dev
 
 # Install PHP extensions
