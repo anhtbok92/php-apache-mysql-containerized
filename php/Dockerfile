@@ -4,5 +4,7 @@ FROM php:${PHP_VERSION:+${PHP_VERSION}-}fpm-alpine
 RUN apk update; \
     apk upgrade;
 
+RUN apk add --no-cache oniguruma-dev
+
 # Install PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql mbstring fileinfo
