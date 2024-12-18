@@ -4,6 +4,5 @@ FROM php:${PHP_VERSION:+${PHP_VERSION}-}fpm-alpine
 RUN apk update; \
     apk upgrade;
 
- RUN docker-php-ext-install mysqli pdo pdo_mysql mbstring fileinfo && \
-     docker-php-ext-configure openssl --with-openssl && \
-     docker-php-ext-install openssl
+# Install PHP extensions
+RUN docker-php-ext-install mysqli pdo pdo_mysql mbstring fileinfo
