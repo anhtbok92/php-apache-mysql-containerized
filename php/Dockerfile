@@ -7,4 +7,9 @@ RUN apk update; \
 RUN apk add --no-cache oniguruma-dev
 
 # Install PHP extensions
-RUN docker-php-ext-install mysqli pdo pdo_mysql mbstring fileinfo
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install pdo
+RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install openssl
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install fileinfo
